@@ -204,3 +204,7 @@ button:focus { outline: 0 }
 .end-emoji{
     font-size: 80px;
 }
+
+.end-pic{ 
+    width: 60vh; 
+}

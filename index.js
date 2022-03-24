@@ -39,18 +39,18 @@ function attack() {
 function endGame() {
     isWaiting = true
     const endMessage = wizard.health === 0 && monster.health === 0 ?
-        "No victors - all creatures are dead" :
-        wizard.health > 0 ? "The Wizard Wins" :
-            "The monsters are Victorious"
+        "Se mataron todos" :
+        wizard.health > 0 ? "Duck saves Middle Earth" :
+            "Ganan los malos"
 
-    const endEmoji = wizard.health > 0 ? "🔮" : "☠️"
+    const endEmoji = wizard.health > 0 ? wizard.victoryPic: monster.victoryPic
         setTimeout(()=>{
             document.body.innerHTML = `
                 <div class="end-game">
                     <h2>Game Over</h2> 
                     <h3>${endMessage}</h3>
-                    <p class="end-emoji">${endEmoji}</p>
-                </div>
+                    <img class="end-pic" src="${endEmoji}"/> 
+                    </div>  
                 `
         }, 1500)
 }
