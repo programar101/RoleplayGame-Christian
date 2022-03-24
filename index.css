@@ -200,6 +200,6 @@ button:focus { outline: 0 }
     text-align: center;
 }
 
-.end-pic{
-    width: 60vh;
+.end-emoji{
+    font-size: 80px;
 }
